@@ -1,5 +1,7 @@
 #include <Rcpp.h>
 #include "jsonparse.h"
+#incude <cstdio>
+
 using namespace Rcpp;
 
 
@@ -89,6 +91,7 @@ List array_to_list(T& array, int& array_len) {
 
     // null
     case 0: {
+      Rcout<<"Part 1"<<"\n";
       out[i] = R_NA_STR;
       break;
     }
@@ -211,6 +214,8 @@ SEXP parse_array(T& array) {
 
   // null
   case 0: {
+
+    Rcout<<"Part 2"<<"\n";
     CharacterVector out(array_len, NA_STRING);
     return out;
   }
@@ -287,6 +292,7 @@ List parse_value(const rapidjson::Value& val) {
 
     // null
     case 0: {
+      Rcout<<"Three"<<"\n";
       out[i] = R_NA_STR;
       break;
     }
@@ -366,6 +372,7 @@ List parse_document(rapidjson::Document& doc) {
 
     // null
     case 0: {
+      Rcout<<"Four"<<"\n";
       out[i] = R_NA_STR;
       break;
     }
@@ -461,6 +468,7 @@ SEXP doc_to_vector(rapidjson::Document& doc, int& dtype) {
 
   // null
   case 0: {
+    Rcout<<"Five"<<"\n";
     CharacterVector out(doc_len, NA_STRING);
     return out;
   }
@@ -513,6 +521,7 @@ List doc_to_list(rapidjson::Document& doc) {
 
     // null
     case 0: {
+      Rcout<<"Six"<<endl;
       out[i] = R_NA_STR;
       break;
     }
