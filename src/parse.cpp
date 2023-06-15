@@ -293,6 +293,7 @@ List parse_value(const rapidjson::Value& val) {
     case 0: {
       Rcout<<"Three"<<"\n";
       out[i] = NA_LOGICAL;
+      Rcout<<"WTF"<<"\n";
       break;
     }
 
