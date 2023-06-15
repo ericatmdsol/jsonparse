@@ -9,7 +9,7 @@
 using namespace Rcpp;
 
 
-#define R_NA_STR CharacterVector(NA_STRING);
+#define R_NA_STR LogicalVector(NA_LOGICAL);
 
 List parse_value(const rapidjson::Value& val);
 
