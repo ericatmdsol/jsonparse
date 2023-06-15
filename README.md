@@ -18,7 +18,7 @@ Install from this repo:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("ChrisMuir/jsonparse")
+devtools::install_github("ericatmdsol/jsonparse")
 ```
 
 ## Example Usage
