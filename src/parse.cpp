@@ -520,7 +520,7 @@ List doc_to_list(rapidjson::Document& doc) {
 
     // null
     case 0: {
-      Rcout<<"Six"<<endl;
+      Rcout<<"Six"<<"\n";
       out[i] = R_NA_STR;
       break;
     }
